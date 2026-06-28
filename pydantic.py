@@ -1,5 +1,7 @@
-from pydantic import BaseModel,EmailStr,ValidationError
-from datetime import datetime
+from pydantic import BaseModel,EmailStr,ValidationError, Field
+from datetime import datetime, UTC
+from functools import partial
+from typing import Literal
 
 class User(BaseModel):
     uid: int
@@ -18,3 +20,14 @@ try:
     user1 = User(uid=12)
 except ValidationError as e:
     print(e)
+
+
+class BlogPost(BaseModel):
+    title: str
+    content: str
+    view_count: int = 0
+    is_published: bool = False
+
+    tags: list[str] = Field(default_factory=list)
+    create_at = datetime = Field(default_factory=partial(datetime.now, tz = UTC))
+    status: Literal["draft","published","archived"] = "draft"
