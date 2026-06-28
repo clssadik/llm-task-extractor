@@ -7,6 +7,7 @@ class User(BaseModel):
     age: int
     bio: str = ""
     is_active: bool = True
+    gender: str | None = None
 
 user1 = User(username="clssadik",email="cillsadik@gmail.com",age=23)
 print(user1)
