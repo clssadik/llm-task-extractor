@@ -9,8 +9,8 @@ from datetime import date
 class Task(BaseModel):
     description: str
     priority: Literal["high","medium","low"]
-    responsible: str
-    due_date = date
+    responsible: str | None
+    due_date = date | None
 
 class MeetingSummary(BaseModel):
     summary: str
@@ -18,7 +18,10 @@ class MeetingSummary(BaseModel):
 
 URL = "https://api.deepseek.com/chat/completions"
 
-user = input("Request: ")
+with open("prompt.txt", "r", encoding="utf-8") as prompt:
+    system = prompt.read()
+
+user = input(requests)
 
 head_params = {
     "Authorization": f"Bearer {os.environ.get('DEEPSEEK_API_KEY')}",
@@ -28,7 +31,7 @@ head_params = {
 json_params = {
     "model": "deepseek-v4-flash",
     "messages": [
-        {"role": "system", "content": "Give the responses only as JSON files."},
+        {"role": "system", "content": system},
         {"role": "user", "content": user},
     ],
     "thinking": {"type": "enabled"},
