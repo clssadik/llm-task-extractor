@@ -1,0 +1,29 @@
+{
+  "summary": "Ürün ekibiyle sprint planlama toplantısı yapıldı; login bug, onboarding tasarımı, veritabanı yedekleme scripti ve dokümantasyon güncellemesi konuşuldu.",
+  "tasks": [
+    {
+      "description": "Login sayfasındaki bug'ı düzelt",
+      "priority": "high",
+      "responsible": "Mehmet",
+      "due_date": null
+    },
+    {
+      "description": "Yeni kullanıcı onboarding akışının tasarımını tamamla",
+      "priority": "medium",
+      "responsible": "Selin",
+      "due_date": null
+    },
+    {
+      "description": "Veritabanı yedekleme scriptini yaz",
+      "priority": "high",
+      "responsible": null,
+      "due_date": null
+    },
+    {
+      "description": "Dokümantasyonu güncelle",
+      "priority": "low",
+      "responsible": "Burak",
+      "due_date": null
+    }
+  ]
+}

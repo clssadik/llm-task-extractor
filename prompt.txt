@@ -23,8 +23,8 @@ Eğer metinde bir bilgi açıkça belirtilmemişse (örneğin tarih verilmemişs
     {
       "description": "Görev açıklaması",
       "priority": "high | medium | low",
-      "responsible": "Kişi adı veya none",
-      "due_date": "YYYY-MM-DD veya none"
+      "responsible": "Kişi adı veya null",
+      "due_date": "YYYY-MM-DD veya null"
     }
   ]
 }
@@ -66,7 +66,7 @@ Beklenen çıktı:
       "description": "Veritabanı indeks optimizasyonunu yap",
       "priority": "low",
       "responsible": "Can",
-      "due_date": none
+      "due_date": null
     },
     {
       "description": "Deployment pipeline'ı hazırla",
@@ -77,8 +77,8 @@ Beklenen çıktı:
     {
       "description": "Dokümantasyonu güncelle",
       "priority": "low",
-      "responsible": none,
-      "due_date": none
+      "responsible": null,
+      "due_date": null
     }
   ]
 }

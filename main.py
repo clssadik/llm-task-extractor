@@ -27,6 +27,10 @@ for i in range(3):
 if not success:
     print("3 denemede de başarısız olundu.")
 
+if success == True:
+    with open("outputs/task.json", "w") as f:
+        f.write(answer)
+
 
 
 
