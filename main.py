@@ -2,19 +2,7 @@ import os
 import requests
 from dotenv import load_dotenv
 load_dotenv()
-from pydantic import BaseModel,ValidationError
-from typing import List,Literal
-from datetime import date
-
-class Task(BaseModel):
-    description: str
-    priority: Literal["high","medium","low"]
-    responsible: str | None
-    due_date = date | None
-
-class MeetingSummary(BaseModel):
-    summary: str
-    tasks: List[Task]
+from pydan import Pydan
 
 URL = "https://api.deepseek.com/chat/completions"
 
@@ -49,9 +37,6 @@ try:
     else:
         response.raise_for_status()
         data = response.json()
-        try:
-            result = MeetingSummary.model_validate(data)
-        except ValidationError as e:
-            print(e)
+        result = Pydan(data=data)
 except requests.exceptions.RequestException as e:
     print(f"Bağlantı hatası: {e}")
