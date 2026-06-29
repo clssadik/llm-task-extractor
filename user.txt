@@ -1,0 +1,5 @@
+Bugün ürün ekibiyle sprint planlama toplantısı yaptık. Mehmet, login sayfasındaki 
+bug'ı acilen düzeltmeli, yarına kadar bitmesi lazım. Selin bu hafta içinde yeni 
+kullanıcı onboarding akışının tasarımını tamamlayacak. Veritabanı yedekleme 
+scriptini Kim yazacağı henüz belli değil ama bir an önce yapılmalı. Ayrıca 
+Burak dokümantasyonu güncelleyecek, sprint sonuna kadar yetişirse yeterli.
