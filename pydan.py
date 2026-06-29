@@ -22,6 +22,7 @@ class Pydan:
             return MeetingSummary.model_validate_json(self.data)
         except ValidationError as e:
             print(e)
+            raise
 
     
     
